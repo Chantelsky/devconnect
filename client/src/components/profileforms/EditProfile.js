@@ -54,11 +54,14 @@ const EditProfile = ({
       githubusername:
         loading || !profile.githubusername ? '' : profile.githubusername,
       bio: loading || !profile.bio ? '' : profile.bio,
-      twitter: loading || !profile.twitter ? '' : profile.social.twitter,
-      facebook: loading || !profile.facebook ? '' : profile.social.facebook,
-      linkedin: loading || !profile.linkedin ? '' : profile.social.linkedin,
-      youtube: loading || !profile.youtube ? '' : profile.social.youtube,
-      instagram: loading || !profile.instagram ? '' : profile.social.instagram
+      twitter: loading || !profile.social.twitter ? '' : profile.social.twitter,
+      facebook:
+        loading || !profile.social.facebook ? '' : profile.social.facebook,
+      linkedin:
+        loading || !profile.social.linkedin ? '' : profile.social.linkedin,
+      youtube: loading || !profile.social.youtube ? '' : profile.social.youtube,
+      instagram:
+        loading || !profile.social.instagram ? '' : profile.social.instagram
     });
   }, [loading]);
 
@@ -139,11 +142,11 @@ const EditProfile = ({
             value={skills}
             onChange={(e) => onChange(e)}
           />
-          <small class='form-text'>
+          <small className='form-text'>
             Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
           </small>
         </div>
-        <div class='form-group'>
+        <div className='form-group'>
           <input
             type='text'
             placeholder='Github Username'
@@ -151,26 +154,26 @@ const EditProfile = ({
             value={githubusername}
             onChange={(e) => onChange(e)}
           />
-          <small class='form-text'>
+          <small className='form-text'>
             If you want your latest repos and a Github link, include your
             username
           </small>
         </div>
-        <div class='form-group'>
+        <div className='form-group'>
           <textarea
             placeholder='A short bio of yourself'
             name='bio'
             value={bio}
             onChange={(e) => onChange(e)}
           />
-          <small class='form-text'>Tell us a little about yourself</small>
+          <small className='form-text'>Tell us a little about yourself</small>
         </div>
 
-        <div class='my-2'>
+        <div className='my-2'>
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type='button'
-            class='btn btn-light'
+            className='btn btn-light'
           >
             Add Social Network Links
           </button>
@@ -179,8 +182,8 @@ const EditProfile = ({
 
         {displaySocialInputs && (
           <Fragment>
-            <div class='form-group social-input'>
-              <i class='fab fa-twitter fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-twitter fa-2x'></i>
               <input
                 type='text'
                 placeholder='Twitter URL'
@@ -190,8 +193,8 @@ const EditProfile = ({
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-facebook fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-facebook fa-2x'></i>
               <input
                 type='text'
                 placeholder='Facebook URL'
@@ -201,8 +204,8 @@ const EditProfile = ({
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-youtube fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-youtube fa-2x'></i>
               <input
                 type='text'
                 placeholder='YouTube URL'
@@ -212,8 +215,8 @@ const EditProfile = ({
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-linkedin fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-linkedin fa-2x'></i>
               <input
                 type='text'
                 placeholder='Linkedin URL'
@@ -223,8 +226,8 @@ const EditProfile = ({
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-instagram fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-instagram fa-2x'></i>
               <input
                 type='text'
                 placeholder='Instagram URL'
@@ -236,8 +239,8 @@ const EditProfile = ({
           </Fragment>
         )}
 
-        <input type='submit' class='btn btn-primary my-1' />
-        <Link class='btn btn-light my-1' to='/dashboard'>
+        <input type='submit' className='btn btn-primary my-1' />
+        <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
         </Link>
       </form>

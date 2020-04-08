@@ -114,11 +114,11 @@ const CreateProfile = ({ createProfile, history }) => {
             value={skills}
             onChange={(e) => onChange(e)}
           />
-          <small class='form-text'>
+          <small className='form-text'>
             Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
           </small>
         </div>
-        <div class='form-group'>
+        <div className='form-group'>
           <input
             type='text'
             placeholder='Github Username'
@@ -126,26 +126,26 @@ const CreateProfile = ({ createProfile, history }) => {
             value={githubusername}
             onChange={(e) => onChange(e)}
           />
-          <small class='form-text'>
+          <small className='form-text'>
             If you want your latest repos and a Github link, include your
             username
           </small>
         </div>
-        <div class='form-group'>
+        <div className='form-group'>
           <textarea
             placeholder='A short bio of yourself'
             name='bio'
             value={bio}
             onChange={(e) => onChange(e)}
           />
-          <small class='form-text'>Tell us a little about yourself</small>
+          <small className='form-text'>Tell us a little about yourself</small>
         </div>
 
-        <div class='my-2'>
+        <div className='my-2'>
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type='button'
-            class='btn btn-light'
+            className='btn btn-light'
           >
             Add Social Network Links
           </button>
@@ -154,8 +154,8 @@ const CreateProfile = ({ createProfile, history }) => {
 
         {displaySocialInputs && (
           <Fragment>
-            <div class='form-group social-input'>
-              <i class='fab fa-twitter fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-twitter fa-2x'></i>
               <input
                 type='text'
                 placeholder='Twitter URL'
@@ -165,8 +165,8 @@ const CreateProfile = ({ createProfile, history }) => {
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-facebook fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-facebook fa-2x'></i>
               <input
                 type='text'
                 placeholder='Facebook URL'
@@ -176,8 +176,8 @@ const CreateProfile = ({ createProfile, history }) => {
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-youtube fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-youtube fa-2x'></i>
               <input
                 type='text'
                 placeholder='YouTube URL'
@@ -187,8 +187,8 @@ const CreateProfile = ({ createProfile, history }) => {
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-linkedin fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-linkedin fa-2x'></i>
               <input
                 type='text'
                 placeholder='Linkedin URL'
@@ -198,8 +198,8 @@ const CreateProfile = ({ createProfile, history }) => {
               />
             </div>
 
-            <div class='form-group social-input'>
-              <i class='fab fa-instagram fa-2x'></i>
+            <div className='form-group social-input'>
+              <i className='fab fa-instagram fa-2x'></i>
               <input
                 type='text'
                 placeholder='Instagram URL'
@@ -211,7 +211,7 @@ const CreateProfile = ({ createProfile, history }) => {
           </Fragment>
         )}
 
-        <input type='submit' class='btn btn-primary my-1' />
+        <input type='submit' className='btn btn-primary my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
         </Link>
